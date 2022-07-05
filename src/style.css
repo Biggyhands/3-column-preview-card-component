@@ -1,0 +1,168 @@
+/*---------Variables---------*/
+:root{
+    --bright-orange:hsl(31, 77%, 52%); /*--------------first square--------------*/
+    --dark-cyan:hsl(184, 100%, 22%);  /*---------------second square------------*/
+    --very-dark-cyan:hsl(179, 100%, 13%);/*------------third square------------*/
+    --transparent-white:hsla(0, 0%, 100%, 0.75);/*-----parapraphs-------------*/
+    --very-light-gray:hsl(0, 0%, 95%);/*---backgrounds, headings, buttons----*/
+    --font-style-a:'Big Shoulders Display', cursive;/*--Titles--*/ 
+    --font-style-b:'Lexend Deca', sans-serif; /*-------text----*/
+}
+/*---------General settings*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;
+    background-color:var(--very-light-gray);
+}
+body{
+    display:flex;
+    flex-direction:column;
+    min-width:375px;
+    width:100vw;
+    height:100vh;
+}
+/*---------Specific column Text settings---------*/
+.main-container--flex{
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   margin:20% 5%;
+}
+.main-card-container{
+   
+    width:80%;
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:30px;
+}
+.card-fig--sedans{
+    margin-bottom:5px;
+}
+.card-text-container h1{
+    font-family:var(--font-style-a);
+    font-weight: bold;
+    color:var(--very-light-gray);
+    font-size:3rem;
+    text-transform:uppercase;
+    line-height:35px;
+    
+}
+.card-text-container p{
+    font-family:var(--font-style-b);
+    font-size:1.2rem;
+    color:var(--transparent-white);
+    margin-bottom:10px;
+    text-align:justify;
+}
+
+.main-card-container--bo{
+    background-color:var(--bright-orange);
+    border-top-left-radius:0.5rem ; 
+    border-top-right-radius:0.5rem ;     
+}
+.main-card-container--c{
+    background-color:var(--dark-cyan);
+}
+.main-card-container--vdc{
+    background-color:var(--very-dark-cyan);
+    border-bottom-left-radius:0.5rem ; 
+    border-bottom-right-radius:0.5rem ;  
+}
+.btn-card{
+    border: solid 1px var(--very-light-gray);
+    width:120px;
+    height:40px;
+    border-radius:2rem;
+    background-color:var(--very-light-gray);
+    text-align:center;
+    font-size:1.3rem; 
+    font-family:var(--font-style-b);
+    display:flex; 
+    justify-content:center;
+    cursor: pointer;
+}
+
+.btn-sedans{
+    color:var(--bright-orange);
+    margin-top:10px;
+    
+}
+.btn-suvs{
+    color:var(--dark-cyan);
+    margin-top:10px;  
+}
+.btn-luxury{
+    color:var(--very-dark-cyan);
+    margin-top:10px 
+}
+/*---------Specific pseudo states properties settings---------*/
+.btn-card:active{
+    background-color:#ffffff00;
+
+    border-color:var(--very-light-gray);
+    color:var(--very-light-gray);
+}
+
+.btn-sedans:hover{
+    color:gray;
+}
+.btn-suvs:hover{
+    color:gray;;
+}
+.btn-luxury:hover{
+    color:black;;
+}
+/*---------Media Queries for desktop---------*/
+@media (min-width:1024px){
+    body{
+        width:100vw;
+        height:100vh;   
+    }
+    .main-container--flex{
+        width:70vw;
+        height:100vh;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        margin:50px 150px 50px 150px;
+    }
+    .main-card-container{
+   
+        width:80%;
+        height:400px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        padding:30px;
+    }
+    .main-card-container--bo{
+        border-top-right-radius:0rem ;
+        border-top-left-radius:0.5rem ; 
+        border-bottom-left-radius:0.5rem ;     
+    }
+    
+    .main-card-container--vdc{
+        border-top-right-radius:0.5rem;
+        border-bottom-left-radius:0rem ; 
+        border-bottom-right-radius:0.5rem ;  
+    }
+    .card-text-container{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+    }
+    .card-text-container h1{
+        margin-bottom:60px;
+    }
+    .card-text-container p{
+        margin-bottom:60px;
+    }
+} 
